@@ -20,3 +20,20 @@ array.forEach((v, i) => {
     td.appendChild(document.createTextNode(v));
     tr.appendChild(td);
 });
+
+
+
+else if(num === 512)
+{
+    num = 0
+
+    sum = 2 + (subnet.split(".")[2])
+    button.push(subnet.split(".")[0] + "." + subnet.split(".")[1] + "." + sum + "." + num + "/" + subnetData.cidr[i])
+  
+}
+
+
+ //for (var b = 0; b < button.length; b++) {
+        //console.log(button[b])
+        //document.getElementById("output").textContent = button[b]
+    //}
