@@ -15,7 +15,7 @@ var subnetData = {
 
 document.getElementById("submit").addEventListener('click', function () {
 
-    
+
     // Reading the input and saving in to a varibale
     var subnet = document.getElementById("SubnetID").value
     console.log(typeof subnet)
@@ -95,41 +95,18 @@ document.getElementById("submit").addEventListener('click', function () {
        
    var table = document.getElementById("myTable");
    table.style.display = "Block"
-    
-     for (var i=0 ; i <= button.length ; i++) {
+   // var row = table.insertRow(0);
+     for (var i=0 ; i < button.length ; i++) {
         
-        // if is created to create headers.
-        if(i == 0 ){
-            var row = table.insertRow(0);
-            row.style.border = "2px solid blue"
-            cell1 = row.insertCell(0);
-            cell1.style.border = "2px solid blue"
-            cell1.innerHTML = "<b>Subnet ID(cidr)</b>";
-            cell2 = row.insertCell(1);
-            cell2.style.border = "2px solid blue"
-            cell2.innerHTML = " &nbsp;<b>IP Address Count</b>"
-        }
-        //for adding rows and colums and data
-        else{
-
-            var row = table.insertRow(i)
-            row.style.border = "2px solid blue"
-            var v = i - 1 
-            //table.style.border = "2px solid black";//
-            cell1 = row.insertCell(0);
-            cell2 = row.insertCell(1)
-            cell1.innerHTML = button[v];
-            cell2.innerHTML =  "&nbsp;" + subRange;
-            cell1.style.border = "2px solid blue"
-            cell2.style.border = "2px solid blue"
-        }
+        var row = table.insertRow(i)
+        //table.style.border = "2px solid black";//
+        cell1 = row.insertCell(0);
+        cell1.innerHTML = button[i];
         
-
         
     }
-    
-    document.getElementById("submit").disabled = true;
 
+    
 
       
 

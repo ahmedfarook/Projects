@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>SubnetCalc</title>
 </head>
+
 <body class="bg-white">
     <header class="text-gray-600 body-font ">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <a style="color:#2c6bca ;font-weight: bolder;font-size:xx-large; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" href="/" class="ml-3 text-lg">Subnet Calculator For Administrators </a>
-          </a>
-          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l-2 md:border-blue-600	flex flex-wrap items-center text-base justify-center font-serif">
-            
-                <a style="color:#00020c;font-weight:bold" href="/" class="mr-5 text-purple-700 text-opacity-100 bg-gray-100 rounded-full hover:bg-blue-300 px-1 py-1">About Me</a>
-                <a style="color:#00020c;font-weight:bold" href="/index.html#section1" class="mr-5 hover:text-gray-900 bg-gray-100 rounded-full hover:bg-blue-300 px-1 py-1">AutoCalc</a>
-          </nav>
-          <br>
-         <br>
-        </div>
-      </header>
-         <br>
-        
-        
-      <div class="lg:w-1/3 md:w-1/3 bg-gray-100 flex flex-col md:ml-auto w-full md:py-5 mt-4 md:mt-0 container px-5 py-25 mx-auto flex sm:flex-nowrap flex-wrap shadow-2xl border-blue-600">
-      <div class="relative mb-4">
-        <label for="Subnet ID" class="leading-7 text-sm text-gray-600">Subnet ID</label>
-        <input type="text" id="SubnetID" name="name" class="w-full bg-white rounded border border-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <div class="relative mb-4">
-        <label for="count" class="leading-7 text-sm text-gray-600">Subnet Count</label>
-        <input type="text" id="count" name="SubnetCount" class="w-full bg-white rounded border border-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-        </div>
-        <button class="text-white md:w-auto bg-blue-500 border-0 py-2 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg" id="submit">Calculate Subnet</button>
-      </div>
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <a style="color:#2c6bca ;font-weight: bolder;font-size:xx-large; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+                    href="/" class="ml-3 text-lg">Subnet Calculator For Administrators </a>
+            </a>
+            <nav
+                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l-2 md:border-blue-600	flex flex-wrap items-center text-base justify-center font-serif">
 
-      <script type="text/javascript" src="js/subnet.js"></script>
+                <a style="color:#00020c;font-weight:bold" href="/"
+                    class="mr-5 text-purple-700 text-opacity-100 bg-gray-100 rounded-full hover:bg-blue-300 px-1 py-1">About
+                    Me</a>
+                <a style="color:#00020c;font-weight:bold" href="/index.html#section1"
+                    class="mr-5 hover:text-gray-900 bg-gray-100 rounded-full hover:bg-blue-300 px-1 py-1">AutoCalc</a>
+            </nav>
+            <br>
+
+            <br>
+        </div>
+    </header>
+    <br>
+
+
+    <div
+        class="lg:w-1/3 md:w-1/3 bg-gray-100 flex flex-col md:ml-auto w-full md:py-5 mt-4 md:mt-0 container px-5 py-25 mx-auto flex sm:flex-nowrap flex-wrap shadow-2xl border-blue-600">
+        <div class="relative mb-4">
+            <label for="Subnet ID" class="leading-7 text-sm text-gray-600">Subnet ID</label>
+            <input type="text" id="SubnetID" name="name"
+                class="w-full bg-white rounded border border-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative mb-4">
+            <label for="count" class="leading-7 text-sm text-gray-600">Subnet Count</label>
+            <input type="text" id="count" name="SubnetCount"
+                class="w-full bg-white rounded border border-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <button
+            class="text-white md:w-auto bg-blue-500 border-0 py-2 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            id="submit">Calculate Subnet</button>
+    </div>
+
+    <br>
+    <br>
+
+        <div class="lg:w-1/3 md:w-1/3   w-full md:py-5 mt-4 md:mt-0  mx-auto  ">
+        <div>
+
+            <p id="output"></p>
+
+            
+        </div>
+
+
+        </div>
+
+        
+    </div>
+
+    <table id="myTable" class="rounded-t-lg table-auto lg:w-1/3 md:w-1/3 w-full md:py-5 mt-4 md:mt-0 mx-auto">
+        <tr class="text-left border-b-2 border-gray-300 ">
+        </tr>
+        
+    
+
+
+
+    <script type="text/javascript" src="js/subnet.js"></script>
+
+   
 </body>
+
 </html>
