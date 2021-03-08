@@ -10,8 +10,8 @@ var table = document.getElementById("myTable");
 table.style.display = "none"
 var count = ["2","4","8","16","32","64","128"]
 var subnetData = {
-    cidr: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
-    ipadd: [2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4]
+    cidr: [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+    ipadd: [4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4]
 } //console.log(subnetData.cidr.length)
 
 //document.write("Hello");
@@ -63,16 +63,38 @@ document.getElementById("submit").addEventListener('click', function () {
                     }
 
                     else if(num === 512)
-
                     {
                         num = 0
-                        sum = 2 + (subnet.split(".")[2])
+                        sum = 2 + Number(subnet.split(".")[2])
+                        subnet = String((subnet.split(".")[0] + "." + subnet.split(".")[1] + "." + sum + "." + num + "/" + subnetData.cidr[i]))
+  
+                    }
+
+                    else if(num === 1024)
+                    {
+                        num = 0
+                        sum = 4 + Number(subnet.split(".")[2])
                         subnet = String((subnet.split(".")[0] + "." + subnet.split(".")[1] + "." + sum + "." + num + "/" + subnetData.cidr[i]))
   
                     }
                     
+                    else if(num === 2048)
+                    {
+                        num = 0
+                        sum = 8 + Number(subnet.split(".")[2])
+                        subnet = String((subnet.split(".")[0] + "." + subnet.split(".")[1] + "." + sum + "." + num + "/" + subnetData.cidr[i]))
+  
+                    }
 
+                    else if(num === 4096)
+                    {
+                        num = 0
+                        sum = 16 + Number(subnet.split(".")[2])
+                        subnet = String((subnet.split(".")[0] + "." + subnet.split(".")[1] + "." + sum + "." + num + "/" + subnetData.cidr[i]))
+  
+                    }
 
+                    
                     button.push(subnet.split(".")[0] + "." + subnet.split(".")[1] + "." + subnet.split(".")[2] + "." + num + "/" + subnetData.cidr[i])
                     //console.log(button)
                     

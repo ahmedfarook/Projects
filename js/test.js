@@ -23,14 +23,14 @@ array.forEach((v, i) => {
 
 
 
-else if(num === 512)
-{
-    num = 0
+// else if(num === 512)
+// {
+//     num = 0
 
-    sum = 2 + (subnet.split(".")[2])
-    button.push(subnet.split(".")[0] + "." + subnet.split(".")[1] + "." + sum + "." + num + "/" + subnetData.cidr[i])
+//     sum = 2 + (subnet.split(".")[2])
+//     button.push(subnet.split(".")[0] + "." + subnet.split(".")[1] + "." + sum + "." + num + "/" + subnetData.cidr[i])
   
-}
+// }
 
 
  //for (var b = 0; b < button.length; b++) {
